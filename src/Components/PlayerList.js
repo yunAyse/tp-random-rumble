@@ -12,7 +12,7 @@ const PlayerList = () => {
   const players = useSelector((store) => store.fight.players);
 
   return (
-    <div className="row">
+    <div className="d-flex gap-5 flex-wrap justify-content-center">
       {players.map((player, index) =>
         player.pv > 0 ? (
           <PlayerCard key={index} player={player} />

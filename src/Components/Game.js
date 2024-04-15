@@ -15,7 +15,7 @@ const App = () => {
         <>
       <Monster />
       <br></br>
-      <section className="container-fluid">
+      <section className="container">
         <PlayerList />
       </section>
         </>

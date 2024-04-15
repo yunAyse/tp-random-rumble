@@ -13,15 +13,13 @@ const Monster = () => {
             <div className="card-monstre col-sm-12">
               <div id="monsterCard">
                 <div className="text-center">
-                  <div className="row">
-                    <div className="col-sm-2 offset-sm-3">
+                  <div className="row justify-content-center">
+                    <div className="col-sm-2 dragon-img-ctn">
                       <span className="badge badge-danger ml-2 " id="degatSpanMonster"></span>
-                      <img className="img-fluid" src={monsterImage} alt='monster' />
+                      <img className="img-fluid dragon-img" src={monsterImage} alt='monster' />
                     </div>
 
-                    <div id="comboOnMonster" className="col-sm-6">
-
-                    </div>
+                    
                   </div>
                 </div>
                 <ProgressBar  pv={monster.pv} pvMax={monster.pvMax} bgType='bg-danger' faType='fa-heart' barName=' : pv' />

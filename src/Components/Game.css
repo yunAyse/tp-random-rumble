@@ -477,7 +477,15 @@ height: 100%;
   
 }
 
+.dragon-img {
+  object-fit: contain;
+  width: 100%;
+}
 
+.dragon-img-ctn {
+  width: 460px;
+  /* object-fit: contain; */
+}
 
 
 
