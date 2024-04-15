@@ -1,32 +1,31 @@
-import React from 'react';
-import PlayerCard from './PlayerCard';
+import React from "react";
+import { useSelector } from "react-redux";
+import PlayerCard from "./PlayerCard";
 
+// displayPlayers = () => {
+//   return Object.keys(this.state.players).map(key => (
+//     <PlayerCard key={this.state.players[key].id} player={this.state.players[key]} />
+//   ));
+// }
 
-class PlayerList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      players: {
-        1: { name: "John", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1 },
-        2: { name: "Jack", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2 },
-        3: { name: "Jessy", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3 },
-        4: { name: "Jenny", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4 }
-      }
-    }
-  }
-  displayPlayers = () => {
-    return Object.keys(this.state.players).map(key => (
-      <PlayerCard key={this.state.players[key].id} player={this.state.players[key]} />
-    ));
-  }
-  render() {
-    return (
-      <div className='row'>
-        {this.displayPlayers()}
-      </div>
-    );
-  }
+const PlayerList = () => {
+  const players = useSelector((store) => store.fight.players);
 
-}
+  return (
+    <div className="row">
+      {players.map((player, index) =>
+        player.pv > 0 ? (
+          <PlayerCard key={index} player={player} />
+        ) : (
+          <div className="card w-25">
+            <div className="card-body" key={index}>
+              {player.name} is dead...
+            </div>
+          </div>
+        )
+      )}
+    </div>
+  );
+};
 
 export default PlayerList;

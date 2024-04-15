@@ -2,10 +2,9 @@ import React from 'react';
 
 
 class ProgressBar extends React.Component {
-    
-    
 
-    render() {
+    render () {
+
         return (
             <div className="progress md-progress" >
                 <div className="progress-bar"
@@ -18,8 +17,10 @@ class ProgressBar extends React.Component {
                 </div>
             </div >
         )
+        
+        
+    }
     }
 
-}
 
 export default ProgressBar;

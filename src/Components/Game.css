@@ -1,3 +1,10 @@
+body {
+  background-image: url(../assets/background_pixel.png);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
 }
@@ -459,7 +466,16 @@ background-color: #ff3547 !important;
 height: 100%;
 }
 
+.cantPlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
+  background-color: #1717174a;
+  
+}
 
 
 

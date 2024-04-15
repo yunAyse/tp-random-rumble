@@ -3,35 +3,32 @@ import ButtonCapacity from './ButtonCapacity';
 import ProgressBar from './ProgressBar';
 
 
+const PlayerCard = ({ player }) => {
+    
+    return (
+        <div key={player.id} className="col-sm-3 card center position-relative" id={`joueur${player.id}`}>
+            {!player.canPlay && 
+                <div className='cantPlay'></div>
+            }
 
-class PlayerCard extends React.Component {
-   
+            <div className="card-body text-center">
+                <img src={player.image} alt={`Samurai ${player.id}`}/>
+                <ProgressBar pv={player.pv} pvMax={player.pvMax} faType='fa-heart' barName=' : pv ' bgType='bg-danger' />
+                <ProgressBar pv={player.mana} pvMax={player.manaMax} faType='fa-fire-alt' barName=' : mana ' />
 
-    render() {
-        return (
-            <div key={this.props.player.id} className="col-sm-3 card center" id={`joueur${this.props.player.id}`}>
+                <span className="badge badge-danger ml-2 " id="degatSpanJ1"></span>
+                <div className="row ">
+                    <div>
+                        <ButtonCapacity playerId={player.id} playerCanPlay={player.canPlay} />
 
-                <div className="card-body text-center">
-                    <h5 className="card-title">{this.props.player.name}</h5>
-                    <ProgressBar pv={this.props.player.pv} pvMax={this.props.player.pvMax} faType='fa-heart' barName=' : pv ' bgType='bg-danger' />
-                    <ProgressBar pv={this.props.player.mana} pvMax={this.props.player.manaMax} faType='fa-fire-alt' barName=' : mana ' />
-
-                    <span className="badge badge-danger ml-2 " id="degatSpanJ1"></span>
-                    <div className="row ">
-                        <div >
-                            <ButtonCapacity player={this.props.player} />
-                            <ButtonCapacity player={this.props.player} />
-                            <ButtonCapacity player={this.props.player} />
-                            <ButtonCapacity player={this.props.player} />
-
-                        </div>
-                    </div >
+                    </div>
                 </div >
-
             </div >
-        )
-    }
-}
+
+        </div >
+    )
+  };
+  
 
 
 export default PlayerCard;
