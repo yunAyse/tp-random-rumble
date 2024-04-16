@@ -12,7 +12,7 @@ class ProgressBar extends React.Component {
                     aria-valuenow={this.props.pv}
                     aria-valuemin="0"
                     aria-valuemax={this.props.pvMax}
-                    role="progressbar" >
+                    role="progressbar">
                     <i className={` fas ${this.props.faType} ${this.props.bgType} icon-text`}> {this.props.pv} {this.props.barName} </i>
                 </div>
             </div >

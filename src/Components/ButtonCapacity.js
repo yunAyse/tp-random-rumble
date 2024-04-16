@@ -8,7 +8,7 @@ const ButtonCapacity = ({ playerId, playerCanPlay }) => {
   const combat = () => {
     dispatch(
       hitMonster({ 
-        monsterDecreasePv: 180 }));
+        monsterDecreasePv: 120 }));
     dispatch(
       hitBack({
         playerHit: playerId - 1,
@@ -27,7 +27,7 @@ const ButtonCapacity = ({ playerId, playerCanPlay }) => {
         <button
           type="button"
           onClick={() => combat()}
-          className="btn btn-success material-tooltip-main "
+          className="btn btn-dark material-tooltip-main "
         >
           hit
           <i className="fas fa-bomb"></i> 5<i className="fas fa-fire-alt"></i> -
@@ -36,7 +36,7 @@ const ButtonCapacity = ({ playerId, playerCanPlay }) => {
       ) : (
         <button
           type="button"
-          className="btn btn-success material-tooltip-main "
+          className="btn btn-dark material-tooltip-main "
           disabled
         >
           hit

@@ -2,7 +2,7 @@ body {
   background-image: url(../assets/background_pixel.png);
 
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
 .App {
@@ -446,6 +446,10 @@ margin: auto;
 display: block;
 }
 
+.progress {
+  height: 30px;
+}
+
 .progress-bar {
 display: -ms-flexbox;
 display: flex;
@@ -459,6 +463,13 @@ white-space: nowrap;
 background-color: #007bff;
 transition: width .6s ease;
 height: 100%;
+
+}
+
+.progress-bar > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bg-danger {
@@ -483,37 +494,34 @@ height: 100%;
 }
 
 .dragon-img-ctn {
-  width: 460px;
+  width: 320px;
   /* object-fit: contain; */
 }
 
+.player-card {
+  background-color: #282c3431;
+  border: 1px solid rgba(255, 255, 255, 0.247);
+  border-radius: 5px;
+}
 
+.player-card img {
+  width: 220px;
+  object-fit: contain;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card-player {
+  .card-player {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+   .card-player {
+   flex-direction: column;
+   }
+  }
+}
 
 
 

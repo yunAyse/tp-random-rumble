@@ -11,10 +11,10 @@ import samuraiFour from '../../assets/samurai4.png';
 const initialState = {
   // TODO : Compléter 'players' et 'monster'
   players: [
-    { image: samuraiOne, pv: 210, pvMax: 100, mana: 30, manaMax: 30, id: 1, canPlay: true},
-    { image: samuraiTwo, pv: 200, pvMax: 100, mana: 30, manaMax: 30, id: 2, canPlay: true},
-    { image: samuraiThree, pv: 160, pvMax: 100, mana: 30, manaMax: 30, id: 3, canPlay: true},
-    { image: samuraiFour, pv: 120, pvMax: 100, mana: 30, manaMax: 30, id: 4, canPlay: true},
+    { image: samuraiOne, pv: 210, pvMax: 210, mana: 30, manaMax: 30, id: 1, canPlay: true},
+    { image: samuraiTwo, pv: 200, pvMax: 200, mana: 30, manaMax: 30, id: 2, canPlay: true},
+    { image: samuraiThree, pv: 160, pvMax: 160, mana: 30, manaMax: 30, id: 3, canPlay: true},
+    { image: samuraiFour, pv: 120, pvMax: 120, mana: 30, manaMax: 30, id: 4, canPlay: true},
   ],
   monster: {
     pv: 800,
